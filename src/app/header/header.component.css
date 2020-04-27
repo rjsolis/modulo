@@ -1,21 +1,25 @@
 .header{
  
-  background-color: #353481;
+  background-color: #006EC1;
   width: 2000px;
   height: 130px;
   display: flex;
   
   align-items: center;
   
-  border-top: 10px solid rgba(0, 0, 0, 0.438);
-  border-bottom: 10px solid rgba(0, 0, 0, 0.438);
-  border-left: 10px solid rgba(0, 0, 0, 0.438);
-  border-right: 10px solid rgba(0, 0, 0, 0.438);
+  border: 2px solid #009EE5;
+  border-radius: 5px;
   color: white;
   text-align: center;
   font-size: 30px;
   justify-content: center;
+
   }
+
+  .p impact{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
   
   .img1 {
     position: relative;
@@ -38,7 +42,7 @@
 
   .container {
     display: flex;
-  background-color: #035aa6;
+  background-color: #52BCEC;
   justify-content: space-around;
   align-items: stretch;
   list-style: none;
@@ -47,33 +51,31 @@
   }
   
   .item {
-    background-color: #40bad5;
+    background-color: #009EE5;
     width: 1150px;
     height: 40px;
     text-align: center;
     color: white;
     font-size: 30px;
-    border-top: 5px solid rgba(0, 0, 0, 0.1);
-      border-bottom: 5px solid rgba(0, 0, 0, 0.1); 
-      border-left: 5px solid rgba(0, 0, 0, 0.1); 
-      border-right: 5px solid rgba(0, 0, 0, 0.1);
+    border: 2px solid #89D1F3;
+    border-radius: 5px;
   }
   
   .item2{
   
-    background-color: #40bad5;
+    background-color: #009EE5;
     width: 1120px;
     height: 40px;
     
     text-align: center;
     color: white;
     font-size: 30px;
-    border-top: 5px solid rgba(0, 0, 0, 0.1);
-      border-bottom: 5px solid rgba(0, 0, 0, 0.1); 
-      border-left: 5px solid rgba(0, 0, 0, 0.1); 
-      border-right: 5px solid rgba(0, 0, 0, 0.1); 
+    border: 2px solid #89D1F3;
+    border-radius: 5px;
   }
   
   .item + .item2{
     margin-left: 0.1%;
   }
+
+ 

@@ -1,0 +1,28 @@
+.list
+{
+    background-color: #006EC1;
+    width: 970px;
+    height: 100px;
+    display: flex;
+    
+    align-items: center;
+    
+    border: 2px solid #009EE5;
+    border-radius: 5px;
+    color: black;
+    text-align: flex-end;
+    font-size: 30px;
+    justify-content: flex-end;
+    
+}
+.img1 {
+    position: relative;
+    top: -0px;
+    left: -880px;
+    width: 80px;
+    height: 80px;
+    
+  }
+  img {max-width:80%;
+max-height: 80%;
+}
