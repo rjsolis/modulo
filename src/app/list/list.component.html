@@ -1,8 +1,14 @@
 <div class="list" *ngFor='let auto of autos'>
     {{auto.descripcion}} 
-    <div class="img1">
+    <div class="img1" (click)="onSelect(auto)">
         <a class="navbar-item">
             <img src="assets/img/ojo.png" width="100" height="100">
         </a>
+        
       </div>
     </div>
+
+<div>
+{{autoSeleccionado.marca}} - {{autoSeleccionado.fecha_registro}}
+
+</div>

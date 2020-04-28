@@ -10,10 +10,14 @@ import { from } from 'rxjs';
 })
 export class ListComponent implements OnInit {
 autos: Automovil[];
+autoSeleccionado: Automovil;
   constructor() { }
 
   ngOnInit() {
     this.autos = AUTOMOVILES;
   }
+onSelect(auto:Automovil) {
 
+  this.autoSeleccionado = auto;
+}
 }
