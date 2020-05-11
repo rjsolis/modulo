@@ -1,81 +1,81 @@
-.header{
- 
+/*Cambie el nombre de las clases container y header ya que esos mismos nombres los utiliza
+   bootstra.css y probablmente estaba causando conflincto eso.
+*/
+
+.my-header {
+
   background-color: #006EC1;
-  width: 2000px;
+  width: 100%;
   height: 130px;
+
+
+  /*En estas 3 lineas siguientes trabajamos con flexbox
+    y con justify-content y align-items se posiciona horizontal y verticalmente respectivamente 
+    tus elementos que esten dentro de flex.
+  */
   display: flex;
-  
+  justify-content: space-between;
   align-items: center;
-  
+
+
   border: 2px solid #009EE5;
   border-radius: 5px;
   color: white;
   text-align: center;
   font-size: 30px;
-  justify-content: center;
+}
 
-  }
-
-  .p impact{
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  
-  .img1 {
-    position: relative;
-    top: 20px;
-    left: -700px;
-    width: 150px;
-    height: 150px;
-    
-  }
-  
-  .img2 {
-    position: relative;
-    top: 20px;
-    left: 600px;
-    width: 150px;
-    height: 150px;
-    
-  }
+.p impact {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 
-  .container {
-    display: flex;
+/*Agregamos un margin a tus dos imagenes para que no esten pegadas alos bordes.*/
+img {
+  margin: 15px;
+}
+
+
+
+
+.item {
+  background-color: #009EE5;
+  width: 1150px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  border: 2px solid #89D1F3;
+  border-radius: 5px;
+  height: auto;
+}
+
+.item2 {
+  align-self: flex-end;
+  background-color: #009EE5;
+  width: 1120px;
+  height: 40px;
+
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  border: 2px solid #89D1F3;
+  border-radius: 5px;
+  height: auto;
+}
+
+.item+.item2 {
+  margin-left: 0.1%;
+}
+
+
+
+.my-container {
+  display: flex;
   background-color: #52BCEC;
   justify-content: space-around;
   align-items: stretch;
   list-style: none;
-    margin: 0; 
-  
-  }
-  
-  .item {
-    background-color: #009EE5;
-    width: 1150px;
-    height: 40px;
-    text-align: center;
-    color: white;
-    font-size: 30px;
-    border: 2px solid #89D1F3;
-    border-radius: 5px;
-  }
-  
-  .item2{
-  
-    background-color: #009EE5;
-    width: 1120px;
-    height: 40px;
-    
-    text-align: center;
-    color: white;
-    font-size: 30px;
-    border: 2px solid #89D1F3;
-    border-radius: 5px;
-  }
-  
-  .item + .item2{
-    margin-left: 0.1%;
-  }
 
- 
+
+}

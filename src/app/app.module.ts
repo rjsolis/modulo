@@ -9,22 +9,22 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
-import { ReactiveFormsModule } from '@angular/forms';
-;
-
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ListComponent
+    ListComponent,
+  
+    
     
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    ReactiveFormsModule
+   
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
