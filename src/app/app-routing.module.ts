@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {Routes, RouterModule} from '@angular/router';
 import { ListComponent } from './list/list.component';
 import { TableComponent } from './table/table.component';
+import { DefaultpageComponent } from './defaultpage/defaultpage.component';
 
 const routes: Routes =[
 {
@@ -14,7 +15,12 @@ component: ListComponent
   path: 'table',
   component: TableComponent
   
-  }
+  },
+
+  { path: '**', 
+  
+  component : DefaultpageComponent
+ }
 ]
 
 @NgModule({
