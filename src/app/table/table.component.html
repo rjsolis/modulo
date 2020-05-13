@@ -1,3 +1,22 @@
-<h1>Componente tabla NgBootStrap Placeholder</h1>
-<p>table works!</p>
 
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Pais</th>
+    <th scope="col">Area</th>
+    <th scope="col">Poblacion</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let country of countries; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>
+      <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="mr-2" style="width: 20px">
+      {{ country.name }}
+    </td>
+    <td>{{ country.area | number }}</td>
+    <td>{{ country.population | number }}</td>
+  </tr>
+  </tbody>
+</table>
