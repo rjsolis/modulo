@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { TableComponent } from './table/table.component';
 import { DefaultpageComponent } from './defaultpage/defaultpage.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 
@@ -29,6 +30,7 @@ import { DefaultpageComponent } from './defaultpage/defaultpage.component';
     BrowserModule,
     NgbModule,
     AppRoutingModule,
+    HttpClientModule,
    
   ],
   providers: [],
