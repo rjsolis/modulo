@@ -2,21 +2,23 @@
 <table class="table table-striped">
   <thead>
   <tr>
-    <th scope="col">#</th>
-    <th scope="col">Pais</th>
-    <th scope="col">Area</th>
-    <th scope="col">Poblacion</th>
+    <th scope="col">id</th>
+    <th scope="col">Marca</th>
+    <th scope="col">Submarca</th>
+    <th scope="col">Descripcion</th>
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let country of countries; index as i">
+  <tr *ngFor="let autoSeleccionado of autos index as i">
     <th scope="row">{{ i + 1 }}</th>
-    <td>
-      <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="mr-2" style="width: 20px">
-      {{ country.name }}
-    </td>
-    <td>{{ country.area | number }}</td>
-    <td>{{ country.population | number }}</td>
+    <td>{{autoSeleccionado.marca}}</td>
+    <td>{{autoSeleccionado.submarca}}</td>
+    <td>{{autoSeleccionado.descripcion}}</td>
+    <td><img src="assets/img/eliminar.png" width="30" height="30"></td>
+    <td><img src="assets/img/edit.png" width="30" height="30"></td>
   </tr>
   </tbody>
 </table>
+
+<p>              </p>
+<ngb-pagination [collectionSize]="20" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
