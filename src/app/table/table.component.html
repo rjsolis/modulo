@@ -14,8 +14,8 @@
     <td>{{autoSeleccionado.marca}}</td>
     <td>{{autoSeleccionado.submarca}}</td>
     <td>{{autoSeleccionado.descripcion}}</td>
-    <td><img src="assets/img/eliminar.png" width="30" height="30"></td>
-    <td><img src="assets/img/edit.png" width="30" height="30"></td>
+    <td (click)="openModalBorrar(autoSeleccionado)"><img src="assets/img/eliminar.png" width="30" height="30"></td>
+    <td (click)="openModalEditar(autoSeleccionado)"><img src="assets/img/edit.png" width="30" height="30"></td>
   </tr>
   </tbody>
 </table>

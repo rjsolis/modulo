@@ -3,6 +3,7 @@ import { AutosService } from '../autos.service';
 import { Automovil } from '../models';
 import { NgbModal,  ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import {AUTOMOVILES} from  '../data'
+import { ModalComponentComponent } from '../modal-component/modal-component.component';
 
 
 
@@ -24,6 +25,22 @@ autoSeleccionado: Automovil;
       this.autos = response.data;
     })
   }
+
+  openModalEditar(auto: Automovil){
+     const modalRef = this.modalService.open(ModalComponentComponent, {centered: true});
+     modalRef.componentInstance.auto = auto;
+     modalRef.componentInstance.accion = 'Editar';
+
+
+  }
+
+  openModalBorrar(auto: Automovil){
+    const modalRef = this.modalService.open(ModalComponentComponent, {centered: true});
+    modalRef.componentInstance.auto = auto;
+    modalRef.componentInstance.accion = 'Borrar';
+
+
+ }
 
   
 

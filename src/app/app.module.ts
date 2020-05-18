@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { TableComponent } from './table/table.component';
 import { DefaultpageComponent } from './defaultpage/defaultpage.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ModalComponentComponent } from './modal-component/modal-component.component';
 
 
 
@@ -21,6 +22,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ListComponent,
     TableComponent,
     DefaultpageComponent,
+    ModalComponentComponent,
     
   
     
@@ -35,6 +37,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   ],
   providers: [],
   bootstrap: [AppComponent],
+  entryComponents: [ModalComponentComponent]
   
 })
 export class AppModule { }
