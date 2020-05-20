@@ -17,4 +17,13 @@ export class ModalAgregarComponent {
   constructor(public activeModal: NgbActiveModal) {
   }
 
+  ngOnInit(){
+
+    
+  }
+
+  onSubmit() {
+   this.activeModal.close(this.auto)
+  }
+
 }

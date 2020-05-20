@@ -4,21 +4,22 @@
         <span aria-hidden="true">&times;</span>
     </button>
 </div>
-
-
-
-
     <div class="modal-body">
-        <form #formAutos = "ngForm">
+        <form #formAutos = "ngForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="marca">Marca</label>
-            <input type="text" class="form-contol" id="marca" placeholder="Agrega la marca"
-                [(ngModel)]="auto.marca" name="marca">
+            <input type="text" class="form-contol" id="marca" placeholder="Agrega la marca" required
+                [(ngModel)]="auto.marca" name="marca" #marca="ngModel" minlength="4">
         </div>
+
+        <div [hidden]="marca.valid" class="alert alert-danger">
+            La marca es requerida 
+        </div>
+
         <div class="form-group">
             <label for="submarca">Submarca</label>
-            <input type="text" class="form-contol" id="submarca" placeholder="Agrega la submarca"
-                [(ngModel)]="auto.submarca" name="submarca">
+            <input type="text" class="form-contol" id="submarca" placeholder="Agrega la submarca" required
+                [(ngModel)]="auto.submarca" name="submarca" #marca="ngModel" minlength="4" >
         </div>
         <div class="form-group">
             <label for="descripcion">Descripcion</label>
@@ -27,12 +28,13 @@
         </div>
         <div class="form-group">
             <label for="modelos">Modelos</label>
-            <input type="text" id="modelos" placeholder="Agrega el modelo"
-                [(ngModel)]="auto.modelos" name="modelos">
+            <input type="number" id="modelos" placeholder="Agrega el modelo" required
+                [(ngModel)]="auto.modelos" name="modelos" min="2000" max="2020" >
         </div>
-    
+        <button type="submit" class="btn btn-outline-dark" [disabled]="!formAutos.form.valid">Guardar</button>
+        
         <div class="modal-footer">
-            <button type="submit" class="btn btn-outline-dark" (click)="activeModal.close(auto)">Guardar</button>
+            
           
         </div>
     
