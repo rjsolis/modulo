@@ -1,4 +1,7 @@
 
+
+<button type="button" class="btn btn-dark" (click)="openModalAgregar()">Agregar <i class="fa fa-plus"></i> </button>
+<p>     </p>
 <table class="table table-striped">
   <thead>
   <tr>
@@ -10,7 +13,7 @@
   </thead>
   <tbody>
   <tr *ngFor="let autoSeleccionado of autos index as i">
-    <th scope="row">{{ i + 1 }}</th>
+    <th scope="row">{{ autoSeleccionado._id }}</th>
     <td>{{autoSeleccionado.marca}}</td>
     <td>{{autoSeleccionado.submarca}}</td>
     <td>{{autoSeleccionado.descripcion}}</td>

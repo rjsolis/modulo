@@ -10,6 +10,9 @@ import { TableComponent } from './table/table.component';
 import { DefaultpageComponent } from './defaultpage/defaultpage.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ModalComponentComponent } from './modal-component/modal-component.component';
+import { FormsModule } from '@angular/forms';
+import { ModalBorrarComponent } from './modal-borrar/modal-borrar.component';
+import { ModalAgregarComponent } from './modal-agregar/modal-agregar.component';
 
 
 
@@ -23,6 +26,8 @@ import { ModalComponentComponent } from './modal-component/modal-component.compo
     TableComponent,
     DefaultpageComponent,
     ModalComponentComponent,
+    ModalBorrarComponent,
+    ModalAgregarComponent,
     
   
     
@@ -33,6 +38,7 @@ import { ModalComponentComponent } from './modal-component/modal-component.compo
     NgbModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
    
   ],
   providers: [],
