@@ -1,0 +1,14 @@
+.log{
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px;
+    height: 400px;
+    margin-top: 20px;
+    overflow: scroll;
+    font-family: "Consolas";
+}
+p{
+    margin: 0;
+}

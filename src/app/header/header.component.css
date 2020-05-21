@@ -40,7 +40,7 @@ img {
 
 .item {
   background-color: #009EE5;
-  width: 1150px;
+  width: 650px;
   height: 40px;
   text-align: center;
   color: white;
@@ -53,7 +53,7 @@ img {
 .item2 {
   align-self: flex-end;
   background-color: #009EE5;
-  width: 1120px;
+  width: 650px;
   height: 40px;
 
   text-align: center;
@@ -63,6 +63,21 @@ img {
   border-radius: 5px;
   height: auto;
 }
+
+.item3 {
+  align-self: flex-end;
+  background-color: #009EE5;
+  width: 650px;
+  height: 40px;
+
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  border: 2px solid #89D1F3;
+  border-radius: 5px;
+  height: auto;
+}
+
 
 .item+.item2 {
   margin-left: 0.1%;
