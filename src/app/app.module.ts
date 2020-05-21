@@ -13,6 +13,7 @@ import { ModalComponentComponent } from './modal-component/modal-component.compo
 import { FormsModule } from '@angular/forms';
 import { ModalBorrarComponent } from './modal-borrar/modal-borrar.component';
 import { ModalAgregarComponent } from './modal-agregar/modal-agregar.component';
+import { FormatoModelosPipe } from './pipes/formato-modelos.pipe';
 
 
 
@@ -28,6 +29,7 @@ import { ModalAgregarComponent } from './modal-agregar/modal-agregar.component';
     ModalComponentComponent,
     ModalBorrarComponent,
     ModalAgregarComponent,
+    FormatoModelosPipe,
     
   
     

@@ -9,6 +9,7 @@
     <th scope="col">Marca</th>
     <th scope="col">Submarca</th>
     <th scope="col">Descripcion</th>
+    <th scope="col">Modelos</th>
   </tr>
   </thead>
   <tbody>
@@ -17,6 +18,7 @@
     <td>{{autoSeleccionado.marca}}</td>
     <td>{{autoSeleccionado.submarca}}</td>
     <td>{{autoSeleccionado.descripcion}}</td>
+    <td>{{autoSeleccionado.modelos| formatoModelos}}</td>
     <td (click)="openModalBorrar(autoSeleccionado)"><img src="assets/img/eliminar.png" width="30" height="30"></td>
     <td (click)="openModalEditar(autoSeleccionado)"><img src="assets/img/edit.png" width="30" height="30"></td>
   </tr>
