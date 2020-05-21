@@ -1,27 +1,40 @@
 
+<p></p>
 
 <button type="button" class="btn btn-dark" (click)="openModalAgregar()">Agregar <i class="fa fa-plus"></i> </button>
+<p></p>
 
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <div class="input-group-text">
+        <i class="fa fa-search">
+        </i>
+      </div>
+    </div>
+    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="¿Qué deseas buscar en la tabla?"
+      [(ngModel)]="searchText" autocomplete="off" />
+    </div>
+    
+    
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Marca</th>
+          <th scope="col">Submarca</th>
+          <th scope="col">Descripcion</th>
+          <th scope="col">Modelos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngIf="displayProgressBar">
+          <th colspan='5'>
+            <ngb-progressbar [value]="100" [striped]=true [animated]=true type="dark"></ngb-progressbar>
+          </th>
+        </tr>
 
-<table class="table table-striped">
-  <thead>
-  <tr>
-    <th scope="col">id</th>
-    <th scope="col">Marca</th>
-    <th scope="col">Submarca</th>
-    <th scope="col">Descripcion</th>
-    <th scope="col">Modelos</th>
-  </tr>
-  </thead>
-  <tbody>
-      <tr *ngIf="displayProgressBar">
-        <th colspan='5'>
-          <ngb-progressbar [value]="100" [striped]=true [animated]=true type="dark"></ngb-progressbar>
-        </th>
-      </tr>
-
-  <tr *ngFor="let autoSeleccionado of autos  | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
-    <th scope="row">{{ autoSeleccionado._id }}</th>
+  <tr *ngFor="let autoSeleccionado of autos | filter:searchText | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize; index as i">
+    <td>{{autoSeleccionado._id }}</td>
     <td>{{autoSeleccionado.marca}}</td>
     <td>{{autoSeleccionado.submarca}}</td>
     <td>{{autoSeleccionado.descripcion}}</td>

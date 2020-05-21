@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ListComponent } from './list/list.component';
@@ -41,7 +42,7 @@ import { FormatoModelosPipe } from './pipes/formato-modelos.pipe';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-   
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent],
