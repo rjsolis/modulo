@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'modulo1';
+
+ ngOnIt(){
+
+  sessionStorage.setItem('currentPage', '1')
+ }
+
+
 }

@@ -2,7 +2,7 @@
 
 <button type="button" class="btn btn-dark" (click)="openModalAgregar()">Agregar <i class="fa fa-plus"></i> </button>
 
-<p *ngIf="displayProgressBar"><ngb-progressbar [value]="100" [striped]=true [animated]=true type="dark"></ngb-progressbar></p>
+
 <table class="table table-striped">
   <thead>
   <tr>
@@ -14,7 +14,13 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let autoSeleccionado of autos index as i">
+      <tr *ngIf="displayProgressBar">
+        <th colspan='5'>
+          <ngb-progressbar [value]="100" [striped]=true [animated]=true type="dark"></ngb-progressbar>
+        </th>
+      </tr>
+
+  <tr *ngFor="let autoSeleccionado of autos  | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
     <th scope="row">{{ autoSeleccionado._id }}</th>
     <td>{{autoSeleccionado.marca}}</td>
     <td>{{autoSeleccionado.submarca}}</td>
@@ -27,4 +33,6 @@
 </table>
 
 <p>              </p>
-<ngb-pagination [collectionSize]="20" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+<div class="pagination"> 
+  <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="autos.length" [maxSize]="5" [ellipses]="false"></ngb-pagination>
+</div>
